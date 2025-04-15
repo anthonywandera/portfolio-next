@@ -2,9 +2,10 @@ import Heading from "./heading";
 import Section from "./section";
 import Service from "./service";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
-import service_image_1 from "../assets/services/mohammad-rahmani-8qEB0fTe9Vw-unsplash.jpg";
-import service_image_2 from "../assets/services/mehdi-mirzaie-kUe-dIOu5FE-unsplash.jpg";
-import service_image_3 from "../assets/services/muhammad-rizki-hpEcXWOJjjc-unsplash.jpg";
+
+import service_image_1 from "../assets/service-images/service-image-01.jpg";
+import service_image_2 from "../assets/service-images/service-image-02.jpg";
+import service_image_3 from "../assets/service-images/service-image-03.jpg";
 
 const Projects: React.FC = () => {
   return (
@@ -24,10 +25,10 @@ const Projects: React.FC = () => {
         </menu>
 
         <div className="grid grid-cols-4 max-md:grid-cols-2 gap-4">
-          <Service image={service_image_3} name="Graphic Design" />
-          <Service image={service_image_2} name="UI Design" />
-          <Service image={service_image_1} name="Web Development" />
-          <Service image={service_image_2} name="UI Design" />
+          <Service image={service_image_3.src} name="Graphic Design" />
+          <Service image={service_image_2.src} name="UI Design" />
+          <Service image={service_image_1.src} name="Web Development" />
+          <Service image={service_image_2.src} name="UI Design" />
         </div>
       </div>
     </Section>
