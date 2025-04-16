@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import Review from "../reviews/review";
 
 function ProjectPreview<
   PropsType extends {
@@ -20,7 +21,7 @@ function ProjectPreview<
     <dialog
       ref={dialog}
       onClose={props.hide}
-      className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 rounded focus:outline-none bg-[var(--theme-color-background-shade)] text-[var(--theme-color-text)]"
+      className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 rounded focus:outline-none bg-[var(--theme-color-background-tint)] text-[var(--theme-color-text)]"
     >
       {props.children}
     </dialog>
@@ -41,7 +42,7 @@ const Project: React.FC<{ image: string; name: string }> = ({
         onClick={() => {
           setSelected(true);
         }}
-        className="bg-black aspect-square rounded-xl relative overflow-hidden font-semibold text-xl"
+        className="aspect-square rounded-xl relative overflow-hidden font-semibold text-xl"
       >
         <Image
           src={image}
@@ -82,7 +83,7 @@ const Project: React.FC<{ image: string; name: string }> = ({
                 debitis quis corporis sit molestiae id molestias!
               </p>
               <div className="relative border rounded border-[var(--theme-color-accent)] p-2">
-                <h3 className="absolute top-0 left-8 -translate-y-1/2 bg- text-lg text-[var(--theme-color-accent)] bg-[var(--theme-color-background-shade)] px-1">
+                <h3 className="absolute top-0 left-8 -translate-y-1/2 bg- text-lg text-[var(--theme-color-accent)] bg-[var(--theme-color-background-tint)] px-1">
                   Technologies
                 </h3>
                 <ul className="flex flex-wrap gap-4 z-50">
@@ -93,6 +94,11 @@ const Project: React.FC<{ image: string; name: string }> = ({
                   <li>REACT</li>
                 </ul>
               </div>
+              <Review
+                date="02/03/2025"
+                name="Allen Smith"
+                value="A masterpiece!"
+              />
             </div>
           </div>
         </ProjectPreview>
