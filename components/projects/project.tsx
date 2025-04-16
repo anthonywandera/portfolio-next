@@ -21,6 +21,12 @@ function ProjectPreview<
     <dialog
       ref={dialog}
       onClose={props.hide}
+      onClick={(e: React.MouseEvent) => {
+        const targetEl = e.target as HTMLElement;
+        const parentDialogEl = targetEl.closest("dialog");
+
+        if (parentDialogEl === targetEl) props.hide();
+      }}
       className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 rounded focus:outline-none bg-[var(--theme-color-background-tint)] text-[var(--theme-color-text)]"
     >
       {props.children}
@@ -83,7 +89,7 @@ const Project: React.FC<{ image: string; name: string }> = ({
                 debitis quis corporis sit molestiae id molestias!
               </p>
               <div className="relative border rounded border-[var(--theme-color-accent)] p-2">
-                <h3 className="absolute top-0 left-8 -translate-y-1/2 bg- text-lg text-[var(--theme-color-accent)] bg-[var(--theme-color-background-tint)] px-1">
+                <h3 className="absolute top-0 left-8 -translate-y-1/2 bg- text-lg text-[var(--theme-color-accent)] bg-[var(--theme-color-background-tint)] z-0 px-1">
                   Technologies
                 </h3>
                 <ul className="flex flex-wrap gap-4 z-50">
