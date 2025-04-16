@@ -1,9 +1,9 @@
-import Button from "./button";
-import Highlighted from "./highlighted";
-import Section from "./section";
+import Button from "../button/button";
+import Highlighted from "../highlighted/highlighted";
+import Section from "../section/section";
 import Image from "next/image";
 
-import profile_image from "../assets/profile.jpg";
+import profile_image from "../../assets/profile.jpg";
 
 const Hero: React.FC = () => {
   return (

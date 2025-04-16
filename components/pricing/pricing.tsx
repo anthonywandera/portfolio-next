@@ -1,6 +1,6 @@
-import Heading from "./heading";
+import Heading from "../heading/heading";
 import PriceCard from "./price-card";
-import Section from "./section";
+import Section from "../section/section";
 
 const _packages = [
   {

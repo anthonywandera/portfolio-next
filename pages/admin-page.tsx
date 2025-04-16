@@ -1,7 +1,7 @@
 "use client";
 import { redirect } from "next/navigation";
 import { useSelector } from "react-redux";
-import Section from "../components/section";
+import Section from "../components/section/section";
 
 export default function AdminPage() {
   const isAuth = useSelector<{ admin: { isAuth: boolean } }>(

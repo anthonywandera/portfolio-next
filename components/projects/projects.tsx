@@ -1,11 +1,11 @@
-import Heading from "./heading";
-import Section from "./section";
-import Service from "./service";
+import Heading from "../heading/heading";
+import Section from "../section/section";
+import Service from "../services/service";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 
-import service_image_1 from "../assets/service-images/service-image-01.jpg";
-import service_image_2 from "../assets/service-images/service-image-02.jpg";
-import service_image_3 from "../assets/service-images/service-image-03.jpg";
+import service_image_1 from "../../assets/service-images/service-image-01.jpg";
+import service_image_2 from "../../assets/service-images/service-image-02.jpg";
+import service_image_3 from "../../assets/service-images/service-image-03.jpg";
 
 const Projects: React.FC = () => {
   return (

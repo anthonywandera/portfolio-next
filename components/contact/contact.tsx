@@ -1,6 +1,6 @@
-import Button from "./button";
-import Heading from "./heading";
-import Section from "./section";
+import Button from "../button/button";
+import Heading from "../heading/heading";
+import Section from "../section/section";
 import { IoSend } from "react-icons/io5";
 
 const Input: React.FC<{

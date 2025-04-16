@@ -1,7 +1,7 @@
 import AboutMe from "./about-me";
-import Heading from "./heading";
-import Section from "./section";
-import Services from "./services";
+import Heading from "../heading/heading";
+import Section from "../section/section";
+import Services from "../services/services";
 
 const About: React.FC = () => {
   return (

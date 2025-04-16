@@ -1,6 +1,6 @@
-import Heading from "./heading";
+import Heading from "../heading/heading";
 import Review from "./review";
-import Section from "./section";
+import Section from "../section/section";
 
 const Reviews: React.FC = () => {
   return (

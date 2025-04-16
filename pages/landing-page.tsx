@@ -1,11 +1,11 @@
-import About from "../components/about";
-import Contact from "../components/contact";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import Hero from "../components/hero";
-import Pricing from "../components/pricing";
-import Projects from "../components/projects";
-import Reviews from "../components/reviews";
+import About from "../components/about/about";
+import Contact from "../components/contact/contact";
+import Footer from "../components/footer/footer";
+import Header from "../components/header/header";
+import Hero from "../components/hero/hero";
+import Pricing from "../components/pricing/pricing";
+import Projects from "../components/projects/projects";
+import Reviews from "../components/reviews/reviews";
 
 export default function LandingPage() {
   return (

@@ -1,10 +1,10 @@
-import Title2 from "./title-2";
+import Title2 from "../heading/title-2";
 import Service from "./service";
-import Section from "./section";
+import Section from "../section/section";
 
-import service_image_1 from "../assets/service-images/service-image-01.jpg";
-import service_image_2 from "../assets/service-images/service-image-02.jpg";
-import service_image_3 from "../assets/service-images/service-image-03.jpg";
+import service_image_1 from "../../assets/service-images/service-image-01.jpg";
+import service_image_2 from "../../assets/service-images/service-image-02.jpg";
+import service_image_3 from "../../assets/service-images/service-image-03.jpg";
 
 const Services: React.FC = () => {
   return (
