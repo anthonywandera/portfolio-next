@@ -3,7 +3,7 @@ import Highlighted from "../highlighted/highlighted";
 import Section from "../section/section";
 import Image from "next/image";
 
-import profile_image from "../../assets/profile.jpg";
+import profile_image from "../../assets/images/profile.jpg";
 
 const Hero: React.FC = () => {
   return (

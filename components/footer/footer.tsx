@@ -70,7 +70,7 @@ const Category: React.FC<{
 
 const Footer: React.FC = () => {
   return (
-    <footer className="p-2 pt-6 text-sm grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:justify-items-center gap-16 bg-black">
+    <footer className="p-2 pt-6 text-sm grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:justify-items-center gap-16 bg-[var(--theme-color-background-shade)] ">
       {CATEGORIES.map((data) => {
         return <Category key={data.name} name={data.name} links={data.links} />;
       })}

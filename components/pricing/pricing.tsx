@@ -5,7 +5,7 @@ import Section from "../section/section";
 const _packages = [
   {
     id: "01",
-    cost: 9,
+    cost: 19,
     features: [
       "1 page",
       "Dynamic content",
@@ -18,7 +18,7 @@ const _packages = [
     id: "02",
     cost: 29,
     features: [
-      "Up to 5 pages",
+      "Up to 3 pages",
       "Static content",
       "Responsive design",
       "Up to 10 animations",

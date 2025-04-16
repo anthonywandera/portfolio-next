@@ -30,7 +30,7 @@ const Review: React.FC<{ name: string; date: string; value: string }> = ({
   const days = Math.trunc(diff / (1000 * 60 * 60 * 24));
 
   return (
-    <div className="bg-black p-4 rounded-lg">
+    <div className="bg-[var(--theme-color-background-shade)]  p-4 rounded-lg">
       <p className="text-2xl font-bold mb-1">{name}</p>
       <p className="text-sm mb-6 opacity-70">{getDifference(days)}</p>
       <p className="opacity-90">{value}</p>

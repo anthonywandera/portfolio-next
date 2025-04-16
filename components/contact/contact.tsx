@@ -11,7 +11,8 @@ const Input: React.FC<{
   textarea?: boolean;
   className?: string;
 }> = ({ className, textarea = false, ...props }) => {
-  const styles = "bg-[#181818] p-2 rounded resize-none";
+  const styles =
+    "bg-[var(--theme-color-background-tint)] p-2 rounded resize-none";
   return (
     <>
       {!textarea ? (
