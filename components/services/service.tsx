@@ -5,7 +5,7 @@ const Service: React.FC<{ image: string; name: string }> = ({
   name,
 }) => {
   return (
-    <div className="bg-black aspect-square rounded-xl relative overflow-hidden font-semibold text-xl">
+    <div className="aspect-square rounded-xl relative overflow-hidden font-semibold text-xl shadow-2xl">
       <Image
         src={image}
         alt={name}

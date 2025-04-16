@@ -4,7 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 function ProjectPreview<
-  PropsType extends { show: boolean; children: React.ReactNode }
+  PropsType extends {
+    show: boolean;
+    children: React.ReactNode;
+    hide: () => void;
+  }
 >(props: PropsType) {
   const dialog = useRef<HTMLDialogElement | null>(null);
 
@@ -15,7 +19,8 @@ function ProjectPreview<
   const markup = (
     <dialog
       ref={dialog}
-      className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 rounded focus:outline-none bg-black text-[var(--theme-color-text)]"
+      onClose={props.hide}
+      className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 rounded focus:outline-none bg-[var(--theme-color-background-shade)] text-[var(--theme-color-text)]"
     >
       {props.children}
     </dialog>
@@ -50,9 +55,14 @@ const Project: React.FC<{ image: string; name: string }> = ({
         </p>
       </div>
       {selected && (
-        <ProjectPreview show={selected}>
-          <div className="grid grid-cols-[auto_1fr] gap-4">
-            <div className="relative h-96 w-48 aspect-auto ">
+        <ProjectPreview
+          show={selected}
+          hide={() => {
+            setSelected(false);
+          }}
+        >
+          <div className="grid grid-cols-[2fr_3fr] gap-4">
+            <div className="relative w-full aspect-[9/16] ">
               <Image
                 src={image}
                 alt={name}
@@ -61,16 +71,28 @@ const Project: React.FC<{ image: string; name: string }> = ({
                 priority
               />
             </div>
-            <div>
-              <h2 className="z-10 mb-2 text-xl text-[var(--theme-color-accent)]">
+            <div className="flex flex-col gap-2">
+              <h2 className="z-10 text-xl text-[var(--theme-color-accent)]">
                 {name}
               </h2>
-              <p className="text-gray-400">
+              <p className="text-gray-400 mb-2">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Explicabo sint inventore nemo, maxime autem, quia incidunt
                 asperiores ducimus temporibus in, reprehenderit amet quos
                 debitis quis corporis sit molestiae id molestias!
               </p>
+              <div className="relative border rounded border-[var(--theme-color-accent)] p-2">
+                <h3 className="absolute top-0 left-8 -translate-y-1/2 bg- text-lg text-[var(--theme-color-accent)] bg-[var(--theme-color-background-shade)] px-1">
+                  Technologies
+                </h3>
+                <ul className="flex flex-wrap gap-4 z-50">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JS</li>
+                  <li>NEXTJs</li>
+                  <li>REACT</li>
+                </ul>
+              </div>
             </div>
           </div>
         </ProjectPreview>
