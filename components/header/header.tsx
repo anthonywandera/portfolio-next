@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 
@@ -18,18 +19,18 @@ const Header: React.FC = () => {
           showMenu ? "" : "max-md:hidden"
         } max-md:absolute max-md:flex-col max-md:-bottom-1 max-md:right-1 max-md:translate-y-full  max-md:gap-4 max-md:bg-inherit max-md:backdrop-blur-2xl max-md:rounded`}
       >
-        <a className="max-md:px-2" href="#home">
+        <Link className="max-md:px-2" href="#home">
           Home
-        </a>
-        <a className="max-md:px-2" href="#about">
+        </Link>
+        <Link className="max-md:px-2" href="#about">
           About
-        </a>
-        <a className="max-md:px-2" href="#projects">
+        </Link>
+        <Link className="max-md:px-2" href="#projects">
           Projects
-        </a>
-        <a className="max-md:px-2" href="#contact">
+        </Link>
+        <Link className="max-md:px-2" href="#contact">
           Contact
-        </a>
+        </Link>
       </nav>
       <button
         onClick={handleToggleMenu}

@@ -1,3 +1,5 @@
+"use client";
+import { useEffect } from "react";
 import About from "../components/about/about";
 import Contact from "../components/contact/contact";
 import Footer from "../components/footer/footer";
@@ -8,6 +10,30 @@ import Projects from "../components/projects/projects";
 import Reviews from "../components/reviews/reviews";
 
 export default function LandingPage() {
+  useEffect(() => {
+    const linkElements = document.querySelectorAll("a");
+    linkElements.forEach((linkEL) => {
+      linkEL.addEventListener("click", (e) => {
+        // prevent refresh
+        e.preventDefault();
+
+        const target = linkEL.getAttribute("href");
+
+        // filter out the unwanted
+        if (target && target.length === 1) return;
+
+        // select the target destination elements
+        const targetEl = document.querySelector(
+          target as string
+        ) as HTMLElement;
+
+        targetEl.scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+  }, []);
+
   return (
     <>
       <Header />
