@@ -49,12 +49,12 @@ const Project: React.FC<{ image: string; name: string }> = ({
         onClick={() => {
           setSelected(true);
         }}
-        className="aspect-square rounded-xl relative overflow-hidden font-semibold text-xl"
+        className="group/project aspect-square rounded-xl relative overflow-hidden font-semibold text-xl"
       >
         <Image
           src={image}
           alt={name}
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center group-hover/project:scale-105 transition-all duration-500"
           fill
           priority
         />
