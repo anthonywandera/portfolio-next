@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Review from "../reviews/review";
+import Link from "next/link";
 
 function ProjectPreview<
   PropsType extends {
@@ -78,7 +79,7 @@ const Project: React.FC<{ image: string; name: string }> = ({
                 priority
               />
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 w-full h-full [&::-webkit-scrollbar]:w-0">
               <h2 className="z-10 text-xl text-[var(--theme-color-accent)]">
                 {name}
               </h2>
@@ -89,7 +90,7 @@ const Project: React.FC<{ image: string; name: string }> = ({
                 debitis quis corporis sit molestiae id molestias!
               </p>
               <div className="relative border rounded border-[var(--theme-color-accent)] p-2">
-                <h3 className="absolute top-0 left-8 -translate-y-1/2 bg- text-lg text-[var(--theme-color-accent)] bg-[var(--theme-color-background-tint)] z-0 px-1">
+                <h3 className="absolute top-0 left-8 -translate-y-1/2 bg- text-lg text-[var(--theme-color-accent)] bg-[var(--theme-color-background-tint)]  px-1">
                   Technologies
                 </h3>
                 <ul className="flex flex-wrap gap-4 z-50">
@@ -105,6 +106,9 @@ const Project: React.FC<{ image: string; name: string }> = ({
                 name="Allen Smith"
                 value="A masterpiece!"
               />
+              <p className="mt-auto ml-auto text-blue-800">
+                <Link href="#">Visit site &rarr;</Link>
+              </p>
             </div>
           </div>
         </ProjectPreview>
