@@ -69,8 +69,8 @@ const Project: React.FC<{ image: string; name: string }> = ({
             setSelected(false);
           }}
         >
-          <div className="grid grid-cols-[2fr_3fr] gap-4">
-            <div className="relative w-full aspect-[9/16] ">
+          <div className="grid grid-cols-[2fr_3fr] gap-4 h-96">
+            <div className="relative">
               <Image
                 src={image}
                 alt={name}
@@ -79,36 +79,48 @@ const Project: React.FC<{ image: string; name: string }> = ({
                 priority
               />
             </div>
-            <div className="flex flex-col gap-2 w-full h-full [&::-webkit-scrollbar]:w-0">
-              <h2 className="z-10 text-xl text-[var(--theme-color-accent)]">
-                {name}
-              </h2>
-              <p className="text-gray-400 mb-2">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Explicabo sint inventore nemo, maxime autem, quia incidunt
-                asperiores ducimus temporibus in, reprehenderit amet quos
-                debitis quis corporis sit molestiae id molestias!
-              </p>
-              <div className="relative border rounded border-[var(--theme-color-accent)] p-2">
-                <h3 className="absolute top-0 left-8 -translate-y-1/2 bg- text-lg text-[var(--theme-color-accent)] bg-[var(--theme-color-background-tint)]  px-1">
-                  Technologies
-                </h3>
-                <ul className="flex flex-wrap gap-4 z-50">
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JS</li>
-                  <li>NEXTJs</li>
-                  <li>REACT</li>
-                </ul>
+            <div className="h-full overflow-hidden overflow-y-scroll [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
+              <div className="flex flex-col gap-2 w-full h-full">
+                <h2 className="z-10 text-xl text-[var(--theme-color-accent)]">
+                  {name}
+                </h2>
+                <p className="text-gray-400">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Explicabo sint inventore nemo, maxime autem, quia incidunt
+                  asperiores ducimus temporibus in, reprehenderit amet quos
+                  debitis quis corporis sit molestiae id molestias!
+                </p>
+                <p className="mb-2 text-blue-800">
+                  <Link href="#">Visit site &rarr;</Link>
+                </p>
+                <div className="relative border rounded border-[var(--theme-color-accent)] p-2">
+                  <h3 className="absolute top-0 left-8 -translate-y-1/2 bg- text-lg text-[var(--theme-color-accent)] bg-[var(--theme-color-background-tint)]  px-1">
+                    Technologies
+                  </h3>
+                  <ul className="flex flex-wrap gap-4 z-50">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                    <li>NEXTJs</li>
+                    <li>REACT</li>
+                  </ul>
+                </div>
+                <Review
+                  date="02/03/2025"
+                  name="Allen Smith"
+                  value="A masterpiece!"
+                />
+                <Review
+                  date="02/03/2025"
+                  name="Allen Smith"
+                  value="A masterpiece!"
+                />
+                <Review
+                  date="02/03/2025"
+                  name="Allen Smith"
+                  value="A masterpiece!"
+                />
               </div>
-              <Review
-                date="02/03/2025"
-                name="Allen Smith"
-                value="A masterpiece!"
-              />
-              <p className="mt-auto ml-auto text-blue-800">
-                <Link href="#">Visit site &rarr;</Link>
-              </p>
             </div>
           </div>
         </ProjectPreview>
