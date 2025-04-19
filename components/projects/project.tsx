@@ -69,7 +69,7 @@ const Project: React.FC<{ image: string; name: string }> = ({
             setSelected(false);
           }}
         >
-          <div className="grid grid-cols-[2fr_3fr] gap-4 h-96">
+          <div className="grid grid-cols-[2fr_3fr] gap-4 h-96 ">
             <div className="relative">
               <Image
                 src={image}
