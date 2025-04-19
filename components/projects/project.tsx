@@ -28,7 +28,7 @@ function ProjectPreview<
 
         if (parentDialogEl === targetEl) props.hide();
       }}
-      className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 rounded focus:outline-none bg-[var(--theme-color-background-tint)] text-[var(--theme-color-text)]"
+      className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 rounded focus:outline-none bg-[var(--theme-color-background-tint)] text-[var(--theme-color-text)] max-md:min-w-3/4"
     >
       {props.children}
     </dialog>
@@ -69,7 +69,7 @@ const Project: React.FC<{ image: string; name: string }> = ({
             setSelected(false);
           }}
         >
-          <div className="grid grid-cols-[2fr_3fr] gap-4 h-96 ">
+          <div className="grid grid-cols-[2fr_3fr] gap-4 h-96 max-md:grid-cols-1 max-md:grid-rows-[2fr_3fr]">
             <div className="relative">
               <Image
                 src={image}
