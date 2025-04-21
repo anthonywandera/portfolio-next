@@ -1,21 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
-interface Project {
-  id: string;
-  name: string;
-  description: string;
-  image: string;
-  url: string;
-}
-
-interface Review {
-  id: string;
-  name: string;
-  review: string;
-  rating: number;
-  projectId: string;
-  createdAt: string;
-}
+import { Project, Review } from "../types";
 
 export const apiSlice = createApi({
   reducerPath: "api",
