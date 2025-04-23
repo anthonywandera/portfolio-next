@@ -8,6 +8,7 @@ import Hero from "../components/hero/hero";
 import Pricing from "../components/pricing/pricing";
 import Projects from "../components/projects/projects";
 import Reviews from "../components/reviews/reviews";
+import StoreProvider from "@/store";
 
 export default function LandingPage() {
   useEffect(() => {
@@ -36,14 +37,16 @@ export default function LandingPage() {
 
   return (
     <>
-      <Header />
-      <Hero />
-      <About />
-      <Projects />
-      <Reviews />
-      <Pricing />
-      <Contact />
-      <Footer />
+      <StoreProvider>
+        <Header />
+        <Hero />
+        <About />
+        <Projects />
+        <Reviews />
+        <Pricing />
+        <Contact />
+        <Footer />
+      </StoreProvider>
     </>
   );
 }
