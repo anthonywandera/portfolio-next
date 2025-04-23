@@ -2,7 +2,7 @@ import Heading from "../heading/heading";
 import Section from "../section/section";
 import Project from "./project";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
-import { useGetProjectsQuery } from "@/store/projects";
+import { useGetProjectsQuery } from "@/store/api";
 import StoreProvider from "@/store/store";
 
 const Projects: React.FC = () => {
