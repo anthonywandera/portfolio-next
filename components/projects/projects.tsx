@@ -17,8 +17,8 @@ const Projects: React.FC = () => {
             <FaAngleLeft />
           </button>
           <button>Web</button>
-          <button>UI/UX Design</button>
-          <button>Graphic Design</button>
+          <button>UI/UX</button>
+          <button>Graphics</button>
           <button>
             <FaAngleRight />
           </button>
