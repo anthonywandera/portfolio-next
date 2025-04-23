@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Button from "../button/button";
 
 const Service: React.FC<{ image: string; name: string }> = ({
   image,
@@ -14,9 +13,6 @@ const Service: React.FC<{ image: string; name: string }> = ({
         fill
         priority
       />
-      <Button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover/service:opacity-100 focus:opacity-100 transition-opacity duration-500">
-        Enquire
-      </Button>
       <p className="w-min absolute left-4 max-sm:left-1.5 bottom-4 max-sm:bottom-1.5">
         {name}
       </p>
