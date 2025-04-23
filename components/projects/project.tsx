@@ -37,10 +37,12 @@ function ProjectPreview<
   return createPortal(markup, document.getElementById("modal")!);
 }
 
-const Project: React.FC<{ image: string; name: string }> = ({
-  image,
-  name,
-}) => {
+const Project: React.FC<{
+  image: string;
+  name: string;
+  description: string;
+  url?: string;
+}> = ({ image, name, description }) => {
   const [selected, setSelected] = useState(false);
 
   return (
@@ -84,12 +86,7 @@ const Project: React.FC<{ image: string; name: string }> = ({
                 <h2 className="z-10 text-xl text-[var(--theme-color-accent)]">
                   {name}
                 </h2>
-                <p className="text-gray-400">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Explicabo sint inventore nemo, maxime autem, quia incidunt
-                  asperiores ducimus temporibus in, reprehenderit amet quos
-                  debitis quis corporis sit molestiae id molestias!
-                </p>
+                <p className="text-gray-400">{description}</p>
                 <p className="mb-2 text-blue-800">
                   <Link href="#">Visit site &rarr;</Link>
                 </p>
